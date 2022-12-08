@@ -11,11 +11,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { ManageCustomersComponent } from './view/manage-customers/manage-customers.component';
+import { PlaceOrderComponent } from './view/place-order/place-order.component';
+import { ManageItemsComponent } from './view/manage-items/manage-items.component';
+import { SearchOrdersComponent } from './view/search-orders/search-orders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    ManageCustomersComponent,
+    PlaceOrderComponent,
+    ManageItemsComponent,
+    SearchOrdersComponent
   ],
   imports: [
     BrowserModule,
