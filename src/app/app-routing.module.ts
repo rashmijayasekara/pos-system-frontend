@@ -4,6 +4,7 @@ import {ManageCustomersComponent} from "./view/manage-customers/manage-customers
 import {PlaceOrderComponent} from "./view/place-order/place-order.component";
 import {ManageItemsComponent} from "./view/manage-items/manage-items.component";
 import {SearchOrdersComponent} from "./view/search-orders/search-orders.component";
+import {DashboardComponent} from "./view/dashboard/dashboard.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:'orders',
     component:SearchOrdersComponent
+  },
+  {
+    path:'dashboard',
+    component:DashboardComponent
   }
 ];
 

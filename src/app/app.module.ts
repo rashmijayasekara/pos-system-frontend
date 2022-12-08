@@ -15,6 +15,7 @@ import { ManageCustomersComponent } from './view/manage-customers/manage-custome
 import { PlaceOrderComponent } from './view/place-order/place-order.component';
 import { ManageItemsComponent } from './view/manage-items/manage-items.component';
 import { SearchOrdersComponent } from './view/search-orders/search-orders.component';
+import { DashboardComponent } from './view/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchOrdersComponent } from './view/search-orders/search-orders.compon
     ManageCustomersComponent,
     PlaceOrderComponent,
     ManageItemsComponent,
-    SearchOrdersComponent
+    SearchOrdersComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
