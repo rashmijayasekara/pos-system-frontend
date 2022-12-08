@@ -23,9 +23,9 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <div class="flex justify-between w-full">
-      <span>POS >> {{activatedRoute}}</span>
-        <span>{{datetime|date: 'medium'|uppercase}}</span>
+      <div class="flex justify-center md:justify-between items-center w-full">
+        <span><span class="inline-block p-2 cursor-pointer hover:bg-sky-900/70 rounded-lg" routerLink="dashboard">POS</span> |  {{activatedRoute}}</span>
+        <span class="hidden md:inline">{{datetime|date: 'medium'|uppercase}}</span>
       </div>
 
     </mat-toolbar>

@@ -16,6 +16,9 @@ import { PlaceOrderComponent } from './view/place-order/place-order.component';
 import { ManageItemsComponent } from './view/manage-items/manage-items.component';
 import { SearchOrdersComponent } from './view/search-orders/search-orders.component';
 import { DashboardComponent } from './view/dashboard/dashboard.component';
+import { LoginComponent } from './view/login/login.component';
+import {MatInputModule} from "@angular/material/input";
+
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { DashboardComponent } from './view/dashboard/dashboard.component';
     PlaceOrderComponent,
     ManageItemsComponent,
     SearchOrdersComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,8 @@ import { DashboardComponent } from './view/dashboard/dashboard.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
