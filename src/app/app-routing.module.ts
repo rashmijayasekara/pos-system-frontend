@@ -5,28 +5,58 @@ import {PlaceOrderComponent} from "./view/place-order/place-order.component";
 import {ManageItemsComponent} from "./view/manage-items/manage-items.component";
 import {SearchOrdersComponent} from "./view/search-orders/search-orders.component";
 import {DashboardComponent} from "./view/dashboard/dashboard.component";
+import {LoginComponent} from "./view/login/login.component";
+import {NavComponent} from "./view/nav/nav.component";
+import {AuthGuard} from "./guard/auth.guard";
 
 const routes: Routes = [
   {
-    path:'customers',
-    component: ManageCustomersComponent
+    path:'',
+    pathMatch:'full',
+    redirectTo:'/app'
   },
   {
-    path:'items',
-    component: ManageItemsComponent
+    path:'login',
+    component:LoginComponent
   },
   {
-    path:'orders/new',
-    component:PlaceOrderComponent
+    path:'app',
+    component:NavComponent,
+    canActivate:[AuthGuard],
+    children:[
+      {
+        path:'',
+        pathMatch:'full', // when only the empty string there the app will be redirected to the dashboard
+        redirectTo:'dashboard'
+      },
+      {
+        path:'customers',
+        component: ManageCustomersComponent
+      },
+      {
+        path:'items',
+        component: ManageItemsComponent
+      },
+      {
+        path:'orders/new',
+        component:PlaceOrderComponent
+      },
+      {
+        path:'orders',
+        component:SearchOrdersComponent
+      },
+      {
+        path:'dashboard',
+        component:DashboardComponent
+      }
+    ]
   },
   {
-    path:'orders',
-    component:SearchOrdersComponent
-  },
-  {
-    path:'dashboard',
-    component:DashboardComponent
+    path:'**',
+    pathMatch:'full',
+    redirectTo:'app'
   }
+
 ];
 
 @NgModule({

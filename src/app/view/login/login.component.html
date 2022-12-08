@@ -3,22 +3,26 @@
   <main class="flex flex-col rounded-md border-gray-200 border-2 border-solid p-16">
     <h1>Welcome to POS System</h1>
     <p class="text-center text-gray-600">Enter your login credentials to continue</p>
+    <form (ngSubmit)="authenticate()">
     <div class="mt-4">
       <mat-form-field appearance="outline" class="w-full">
         <mat-label>Enter Username</mat-label>
-        <input matInput placeholder="Eg. Will Smith">
+        <input name="username" [(ngModel)]="username" matInput placeholder="Eg. Will Smith" required>
         <mat-icon matSuffix>person</mat-icon>
+        <mat-error>Username can't be empty</mat-error>
       </mat-form-field>
     </div>
-    <div>
+    <div class="mt-4">
       <mat-form-field appearance="outline" class="w-full">
         <mat-label>Enter Username</mat-label>
-        <input type="password" matInput placeholder="Eg. Your Secret">
+        <input name="password" [(ngModel)]="password" type="password" matInput placeholder="Eg. Your Secret" required>
         <mat-icon matSuffix>password</mat-icon>
+        <mat-error>Password can't be empty</mat-error>
       </mat-form-field>
     </div>
-    <div>
+    <div class="mt-4">
       <button class="w-full" mat-raised-button color="primary">Log In</button>
     </div>
+    </form>
   </main>
 </div>

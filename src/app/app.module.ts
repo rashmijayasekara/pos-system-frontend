@@ -18,6 +18,7 @@ import { SearchOrdersComponent } from './view/search-orders/search-orders.compon
 import { DashboardComponent } from './view/dashboard/dashboard.component';
 import { LoginComponent } from './view/login/login.component';
 import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import {MatInputModule} from "@angular/material/input";
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

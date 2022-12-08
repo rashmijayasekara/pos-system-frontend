@@ -10,7 +10,7 @@
       <a mat-list-item href="#" routerLink="items"><mat-icon class="align-sub">checklist</mat-icon> Manage Items</a>
       <a mat-list-item href="#" routerLink="orders/new"><mat-icon class="align-sub">shopping_cart</mat-icon> Place Order</a>
       <a mat-list-item href="#" routerLink="orders"><mat-icon class="align-sub">search</mat-icon> Search Orders</a>
-      <a mat-list-item href="#" class="align-sub"><mat-icon class="align-sub">logout</mat-icon> Log out</a>
+      <a mat-list-item href="#" class="align-sub" (click)="logout()"><mat-icon class="align-sub">logout</mat-icon> Log out</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

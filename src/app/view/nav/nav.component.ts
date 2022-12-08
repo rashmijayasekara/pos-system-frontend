@@ -30,6 +30,7 @@ export class NavComponent implements OnInit{
 
   }
 
+
   ngOnInit(): void {
     setInterval(() => this.datetime = Date.now(),900)
     this.router.events.subscribe(event=>{
@@ -61,5 +62,8 @@ export class NavComponent implements OnInit{
   }
 
 
-
+  logout():void {
+    localStorage.removeItem("token");
+    this.router.navigateByUrl('login');
+  }
 }
